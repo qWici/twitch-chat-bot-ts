@@ -1,0 +1,45 @@
+{
+  "extends": ["airbnb-typescript/base"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "@typescript-eslint/semi": ["off", "always"],
+    "@typescript-eslint/quotes": ["error", "double"],
+    "max-len": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off",
+    "no-shadow": "off",
+    "react/no-array-index-key": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "linebreak-style": "off",
+    "import/no-named-as-default": "off",
+    "@typescript-eslint/naming-convention": [
+      "warn", {
+        "selector": ["variable"],
+        "format": null,
+        "leadingUnderscore" : "allow"
+      }
+    ],
+    "import/no-cycle": "off",
+    "import/no-mutable-exports": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-unescaped-entities": "off",
+    "react/button-has-type": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-unused-vars" : "warn",
+    "@typescript-eslint/object-curly-spacing": "warn",
+    "no-await-in-loop": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": [2, {
+      "props": false
+    }]
+  }
+}
