@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/concurrently": "^6.2.1",
+    "@types/tmi.js": "^1.7.2",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "babel-eslint": "^10.1.0",
@@ -40,6 +41,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "tmi.js": "^1.8.3"
   }
 }

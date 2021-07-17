@@ -16,11 +16,18 @@ dotenv.config({
   path: configPath,
 });
 
-if (!process.env.BOT_USERNAME) {
-  console.error("Missing BOT_USERNAME value");
-  process.exit(0);
-}
+const requiredEnvs = ["BOT_USERNAME", "BOT_OAUTH_TOKEN", "CHANNEL"];
+requiredEnvs.map((value) => {
+  if (!process.env[value]) {
+    console.error(`Missing ${value} value`);
+    process.exit(0);
+  }
+
+  return true;
+});
 
 export default {
   BOT_USERNAME: process.env.BOT_USERNAME || "",
+  BOT_OAUTH_TOKEN: process.env.BOT_OAUTH_TOKEN || "",
+  CHANNEL: process.env.CHANNEL || "",
 };
