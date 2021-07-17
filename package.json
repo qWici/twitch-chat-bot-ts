@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "bump": "standard-version --skip.tag",
+    "release": "git flow release start `sh scripts/nextver.sh`",
+    "publish": "git flow release finish `sh scripts/ver.sh`",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
