@@ -1,8 +1,31 @@
 # Getting started
 
 Install deps
+
 ```shell
 npm install
+```
+
+Create config files
+
+```shell
+# For production
+cp .example.env .env
+
+# For dev
+cp .example.env .dev.env
+```
+
+Setup env file:
+```dotenv
+# You must register a new user on Twitch, which will be used by the bot
+BOT_USERNAME=mychannel_bot
+
+# Token you can get here by login via bot https://twitchapps.com/tmi/
+BOT_OAUTH_TOKEN=oauth:abc123asd512zxc
+
+# Your twitch username
+CHANNEL=devkucher
 ```
 
 ## Developing

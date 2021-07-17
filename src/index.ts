@@ -1,3 +1,7 @@
-console.log("Hello world!");
+import config from "./config";
+import { TmiClient } from "./tmi-client";
 
-export {};
+const client = TmiClient();
+client.connect().then(() => console.log("Client connected"));
+
+console.log(config.BOT_USERNAME);
