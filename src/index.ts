@@ -1,3 +1,3 @@
-console.log("Hello world!");
+import config from "./config";
 
-export {};
+console.log(config.BOT_USERNAME);
