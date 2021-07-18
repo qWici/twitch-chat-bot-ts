@@ -1,7 +1,14 @@
-import config from "./config";
 import { TmiClient } from "./tmi-client";
+import { SocialLinks } from "./commands/social-links";
+import { resolveCommands } from "./command-resolver";
 
-const client = TmiClient();
-client.connect().then(() => console.log("Client connected"));
+export const client = TmiClient();
+client.connect().then(() => {
+  console.log("client started");
+});
 
-console.log(config.BOT_USERNAME);
+const commands = [
+  SocialLinks(),
+];
+
+resolveCommands({ commandPrefix: "!" }, commands);
