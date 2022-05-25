@@ -41,7 +41,7 @@ export class ThrottlingManager {
 
     this.stack.find((stackItem, index) => {
       if (stackItem.username !== item.username) return false;
-      if (stackItem.command.options.name !== item.command.options.name) return false;
+      if (stackItem.command.options.signature !== item.command.options.signature) return false;
 
       founded = { stackItem, index };
       return true;
@@ -53,7 +53,7 @@ export class ThrottlingManager {
   private getCountOfItems(item: ThrottlingStackItem) {
     const foundItems = this.stack.filter((stackItem) => {
       if (stackItem.username !== item.username) return false;
-      if (stackItem.command.options.name !== item.command.options.name) return false;
+      if (stackItem.command.options.signature !== item.command.options.signature) return false;
 
       return stackItem;
     });

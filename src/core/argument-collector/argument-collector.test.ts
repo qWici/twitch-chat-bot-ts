@@ -1,7 +1,7 @@
 import { Command } from "@common/command";
 import { argumentCollector } from "./argument-collector";
 
-const commandMock = () => new Command({ name: "help", resolver: () => "" });
+const commandMock = () => new Command({ signature: "help", resolver: () => "" });
 
 test("String argument exist", () => {
   const command = commandMock();

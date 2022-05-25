@@ -2,7 +2,7 @@ import { Command } from "@common/command";
 import { commandRecognizer } from "./command-recognizer";
 
 const prefix = "!";
-const commandMock = (name: string) => new Command({ name, resolver: () => "" });
+const commandMock = (name: string) => new Command({ signature: name, resolver: () => "" });
 
 test("With 0 command", () => {
   const command = commandMock("help");

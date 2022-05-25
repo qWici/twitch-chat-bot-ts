@@ -8,7 +8,7 @@ client.connect().then(() => {
 });
 
 const commands = [
-  SocialLinks(),
+  SocialLinks,
 ];
 
 resolveCommands(commands);
