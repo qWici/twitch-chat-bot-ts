@@ -13,7 +13,7 @@ export const findCommandInMessage = (commands: Command[], commandFromMessage: st
 
   commands.map((command) => {
     // Find by name
-    if (equal(command.options.name, commandFromMessage)) {
+    if (equal(command.options.signature, commandFromMessage)) {
       result = {
         founded: true,
         command,

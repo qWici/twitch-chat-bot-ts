@@ -20,7 +20,7 @@ export type ArgumentValues = Record<string, string | number | null> | null;
 export type CommandResolver = (args: ArgumentValues) => string | false;
 
 export type CommandOpts = {
-  name: string;
+  signature: string;
   resolver: CommandResolver;
   args?: CommandArgument[];
   aliases?: string[];

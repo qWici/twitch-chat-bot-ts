@@ -15,4 +15,4 @@ const resolver: CommandResolver = (args) => {
   }
 };
 
-export const SocialLinks = new Command({ name: Signatures.SOCIAL_LINKS, resolver, args: [{ key: "type", type: "string" }] });
+export const SocialLinks = new Command({ signature: Signatures.SOCIAL_LINKS, resolver, args: [{ key: "type", type: "string" }] });
