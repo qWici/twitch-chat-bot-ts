@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.4.0 (2022-05-25)
+
+
+### Features
+
+* **command-resolver:** has default options ([36ab34d](https://github.com/qWici/twitch-chat-bot-ts/commit/36ab34d30873572e7d196ffe65fc02a9bc696dd7))
+* **config:** add basic setup ([2ded1a8](https://github.com/qWici/twitch-chat-bot-ts/commit/2ded1a8baaa9e3fe4025c5abe39287410abe6d6e))
+* **main:** add a lot of staff ([e630cd8](https://github.com/qWici/twitch-chat-bot-ts/commit/e630cd85ded4f54ed85f906bd4a00cab6d16ed5f))
+* **tmi-client:** add client ([70ce8ff](https://github.com/qWici/twitch-chat-bot-ts/commit/70ce8ffd878662c8c0e36b43d42fa633e7db5ccb))
+
 ## 1.3.0 (2022-05-25)
 
 
