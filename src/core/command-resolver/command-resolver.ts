@@ -1,18 +1,24 @@
 import { CommonUserstate } from "tmi.js";
-import { Command } from "./command";
-import { CommandResolverOpts } from "./types";
-import { client } from "./index";
-import { commandRecognizer } from "./utils/commandRecognizer";
-import { messageToUser } from "./utils/messageToUser";
-import { checkRoles } from "./utils/checkRoles";
-import { throttlingManager } from "./throttling-manager";
+import { Command } from "@common/command";
+import { messageToUser } from "@utils/messageToUser";
+import { checkRoles } from "@utils/checkRoles";
+import { CommandResolverOpts } from "../../types";
+import { client } from "../../index";
+import { commandRecognizer } from "../command-recognizer/command-recognizer";
+import { throttlingManager } from "../throttling-manager/throttling-manager";
 
-export const resolveCommands = (options: CommandResolverOpts, commands: Command[]) => {
+export const resolveCommands = (commands: Command[], options?: CommandResolverOpts) => {
+  const defaultOptions: CommandResolverOpts = {
+    commandPrefix: "!",
+  };
+
+  const mergedOptions = Object.assign(defaultOptions, options);
+
   const resolve = (channel: string, userstate: CommonUserstate, message: string, self: boolean) => {
     // Ignore bot messages
     if (self) return false;
 
-    const recognizedCommand = commandRecognizer(message, options.commandPrefix, commands);
+    const recognizedCommand = commandRecognizer(message, mergedOptions.commandPrefix, commands);
     if (!recognizedCommand.isCommand) return false;
 
     const hasPermissions = checkRoles(recognizedCommand.command, userstate);

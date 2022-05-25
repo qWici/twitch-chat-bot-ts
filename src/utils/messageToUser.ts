@@ -1,5 +1,5 @@
 import { client } from "../index";
-import config from "../config";
+import config from "../common/config";
 
 export const messageToUser = async (message: string, username?: string) => {
   if (!username) {

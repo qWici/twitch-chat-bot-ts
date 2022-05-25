@@ -1,5 +1,5 @@
-import { argumentCollector } from "./argumentCollector";
-import { Command } from "../command";
+import { Command } from "@common/command";
+import { argumentCollector } from "./argument-collector";
 
 const commandMock = () => new Command({ name: "help", resolver: () => "" });
 

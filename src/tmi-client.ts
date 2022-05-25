@@ -1,5 +1,5 @@
 import tmi from "tmi.js";
-import config from "./config";
+import config from "./common/config";
 
 export const TmiClient = () => new tmi.Client({
   connection: {
