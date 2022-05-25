@@ -11,4 +11,4 @@ const commands = [
   SocialLinks(),
 ];
 
-resolveCommands({ commandPrefix: "!" }, commands);
+resolveCommands(commands);

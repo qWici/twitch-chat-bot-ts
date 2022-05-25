@@ -7,12 +7,18 @@ import { messageToUser } from "./utils/messageToUser";
 import { checkRoles } from "./utils/checkRoles";
 import { throttlingManager } from "./throttling-manager";
 
-export const resolveCommands = (options: CommandResolverOpts, commands: Command[]) => {
+export const resolveCommands = (commands: Command[], options?: CommandResolverOpts) => {
+  const defaultOptions: CommandResolverOpts = {
+    commandPrefix: "!",
+  };
+
+  const mergedOptions = Object.assign(defaultOptions, options);
+
   const resolve = (channel: string, userstate: CommonUserstate, message: string, self: boolean) => {
     // Ignore bot messages
     if (self) return false;
 
-    const recognizedCommand = commandRecognizer(message, options.commandPrefix, commands);
+    const recognizedCommand = commandRecognizer(message, mergedOptions.commandPrefix, commands);
     if (!recognizedCommand.isCommand) return false;
 
     const hasPermissions = checkRoles(recognizedCommand.command, userstate);
