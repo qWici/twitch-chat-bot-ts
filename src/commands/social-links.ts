@@ -1,4 +1,4 @@
-import { Command } from "../command";
+import { Command } from "@common/command";
 import { CommandResolver } from "../types";
 import { Signatures } from "./signatures";
 

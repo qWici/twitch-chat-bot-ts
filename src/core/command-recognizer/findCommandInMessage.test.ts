@@ -1,4 +1,4 @@
-import { Command } from "../command";
+import { Command } from "@common/command";
 import { findCommandInMessage } from "./findCommandInMessage";
 
 const commandMock = (name: string) => new Command({ name, resolver: () => "" });
