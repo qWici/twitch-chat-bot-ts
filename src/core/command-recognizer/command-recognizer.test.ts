@@ -1,5 +1,5 @@
-import { Command } from "../command";
-import { commandRecognizer } from "./commandRecognizer";
+import { Command } from "@common/command";
+import { commandRecognizer } from "./command-recognizer";
 
 const prefix = "!";
 const commandMock = (name: string) => new Command({ name, resolver: () => "" });

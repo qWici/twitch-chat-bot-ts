@@ -1,6 +1,6 @@
-import { Command } from "../command";
+import { Command } from "@common/command";
 import { findCommandInMessage } from "./findCommandInMessage";
-import { argumentCollector } from "./argumentCollector";
+import { argumentCollector } from "../argument-collector/argument-collector";
 
 type commandRecognizerResult =
   { isCommand: true, command: Command, values: null } |

@@ -1,6 +1,6 @@
+import { SocialLinks } from "@commands/social-links";
+import { resolveCommands } from "@core/command-resolver/command-resolver";
 import { TmiClient } from "./tmi-client";
-import { SocialLinks } from "./commands/social-links";
-import { resolveCommands } from "./command-resolver";
 
 export const client = TmiClient();
 client.connect().then(() => {

@@ -1,6 +1,6 @@
 import { CommonUserstate } from "tmi.js";
-import { Command } from "../command";
-import config from "../config";
+import { Command } from "@common/command";
+import config from "../common/config";
 import { Role } from "../types";
 
 export const checkRoles = (command: Command, user: CommonUserstate) => {

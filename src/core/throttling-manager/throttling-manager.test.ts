@@ -1,4 +1,4 @@
-import { Command } from "./command";
+import { Command } from "@common/command";
 import { ThrottlingManager } from "./throttling-manager";
 
 const commandMock = () => new Command({ name: "help", resolver: () => "" });

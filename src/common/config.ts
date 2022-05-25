@@ -4,7 +4,7 @@ import * as fs from "fs";
 
 const isProduction = process.env.NODE_ENV === "production";
 const configFilename = isProduction ? ".env" : ".dev.env";
-const configPath = path.join(__dirname, "../", configFilename);
+const configPath = path.join(__dirname, "../../", configFilename);
 const isConfigFileExist = fs.existsSync(configPath);
 
 if (!isConfigFileExist) {

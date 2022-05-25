@@ -1,6 +1,6 @@
-import { Command } from "../command";
+import { Command } from "@common/command";
 import { checkRoles } from "./checkRoles";
-import config from "../config";
+import config from "../common/config";
 
 const commandMock = (name: string) => new Command({ name, resolver: () => "" });
 

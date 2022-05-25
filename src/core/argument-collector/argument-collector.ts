@@ -1,5 +1,5 @@
-import { Command } from "../command";
-import { ArgumentCollectorResult, CommandArgument } from "../types";
+import { Command } from "@common/command";
+import { ArgumentCollectorResult, CommandArgument } from "../../types";
 
 export const argumentCollector = (command: Command, message: string): ArgumentCollectorResult => {
   const result: ArgumentCollectorResult = {
