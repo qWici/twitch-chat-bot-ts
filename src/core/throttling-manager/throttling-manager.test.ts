@@ -1,7 +1,7 @@
 import { Command } from "@common/command";
 import { ThrottlingManager } from "./throttling-manager";
 
-const commandMock = () => new Command({ name: "help", resolver: () => "" });
+const commandMock = () => new Command({ signature: "help", resolver: () => "" });
 
 jest.useFakeTimers();
 

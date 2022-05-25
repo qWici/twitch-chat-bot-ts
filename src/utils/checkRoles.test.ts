@@ -2,7 +2,7 @@ import { Command } from "@common/command";
 import { checkRoles } from "./checkRoles";
 import config from "../common/config";
 
-const commandMock = (name: string) => new Command({ name, resolver: () => "" });
+const commandMock = (name: string) => new Command({ signature: name, resolver: () => "" });
 
 test("Without roles", () => {
   const command = commandMock("help");

@@ -1,7 +1,7 @@
 import { Command } from "@common/command";
 import { findCommandInMessage } from "./findCommandInMessage";
 
-const commandMock = (name: string) => new Command({ name, resolver: () => "" });
+const commandMock = (name: string) => new Command({ signature: name, resolver: () => "" });
 
 test("Doesn't have command", () => {
   const command = commandMock("help");
